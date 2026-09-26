@@ -88,5 +88,5 @@ Uso correto da pasta assets
 
 Observação: se alguma informação ainda não existir, use placeholders editáveis como [WHATSAPP], [INSTAGRAM], [EMAIL] e [PREÇO].
 
-contatos: insta:@todalinda_storeee   whatsapp:+5598985700659
+contatoas: insta:@todalinda_storeee   whatsapp:+5598985700659
 

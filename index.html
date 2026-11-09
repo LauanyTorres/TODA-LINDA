@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f8f4ee" />
+    <meta name="theme-color" content="#f7f2e9" />
     <meta
       name="description"
-      content="TODA LINDA STORE: biquínis com leveza, cor e personalidade. Conheça a coleção e peça pelo WhatsApp."
+      content="TODA LINDA STORE: moda feminina para diferentes momentos, com conforto, personalidade e beleza. Conheça a coleção e peça pelo WhatsApp."
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="TODA LINDA STORE | Biquínis para dias de sol" />
+    <meta property="og:title" content="TODA LINDA STORE | Moda para dias leves" />
     <meta
       property="og:description"
-      content="Um lookbook de biquínis para você se sentir toda linda."
+      content="Moda feminina para diferentes momentos, com conforto e personalidade."
     />
-    <meta property="og:image" content="assets/8.webp" />
-    <title>TODA LINDA STORE | Biquínis para dias de sol</title>
+    <meta property="og:image" content="assets/logo.webp" />
+    <title>TODA LINDA STORE | Moda para dias leves</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +29,7 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: { sand: '#f8f4ee', ink: '#253238', coral: '#cf624e', sea: '#6faeaa', gold: '#b99348' },
+            colors: { sand: '#f7f2e9', ink: '#302a28', coral: '#a76554', sea: '#8b7664', gold: '#b99348' },
             fontFamily: { display: ['Playfair Display', 'serif'], sans: ['DM Sans', 'sans-serif'] }
           }
         }
@@ -42,54 +42,50 @@
 
     <header class="absolute inset-x-0 top-0 z-20">
       <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8" aria-label="Navegação principal">
-        <a class="flex items-center gap-2 text-sm font-bold tracking-[0.16em] text-white" href="#inicio" aria-label="TODA LINDA STORE, início">
+        <a class="flex items-center gap-2 text-sm font-bold tracking-[0.16em] text-ink" href="#inicio" aria-label="TODA LINDA STORE, início">
           <span class="shell-mark" aria-hidden="true">◡</span> TODA LINDA
         </a>
-        <div class="hidden items-center gap-7 text-sm font-medium text-white/90 md:flex">
-          <a class="nav-link" href="#colecao">Coleção</a>
-          <a class="nav-link" href="#sobre">A marca</a>
-          <a class="nav-link" href="#contato">Contato</a>
+        <div class="hidden items-center gap-7 text-sm font-medium text-ink/80 md:flex">
+          <a class="nav-link hidden md:inline" href="#sobre">A marca</a>
+          <a class="nav-link hidden md:inline" href="#contato">Contato</a>
         </div>
-        <a class="rounded-full border border-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-white transition hover:bg-white hover:text-ink" href="https://wa.me/5598985700659?text=Olá%2C%20vim%20pelo%20site%20da%20TODA%20LINDA%20STORE!" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="header-contact rounded-full border border-ink/30 px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-ink transition hover:bg-ink hover:text-white" href="https://wa.me/5598985700659?text=Olá%2C%20vim%20pelo%20site%20da%20TODA%20LINDA%20STORE!" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+      <nav class="category-nav" aria-label="Categorias de roupas">
+        <a class="category-link" href="#colecao">Moda praia</a>
+        <a class="category-link" href="#pijamas-title"><span class="category-label-mobile">Pijamas</span><span class="category-label-desktop">Pijamas &amp; camisolas</span></a>
+        <a class="category-link category-link-cta" href="#colecao">Descubra a coleção <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main id="conteudo">
-      <section id="inicio" class="relative isolate flex min-h-[44rem] items-end overflow-hidden bg-ink sm:min-h-[48rem]">
-        <picture class="absolute inset-0 -z-20">
-          <source srcset="assets/8.webp" type="image/webp" />
-          <img class="h-full w-full object-cover object-[center_35%]" src="assets/8.jpg" alt="Modelo vestindo biquíni coral TODA LINDA" width="982" height="992" fetchpriority="high" />
-        </picture>
-        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black/75 via-black/20 to-black/20"></div>
-        <div class="mx-auto w-full max-w-7xl px-5 pb-16 pt-40 sm:px-8 sm:pb-20 lg:pb-24">
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-white/85">Coleção verão</p>
-          <h1 class="max-w-2xl font-display text-5xl leading-[0.95] text-white sm:text-7xl lg:text-8xl">Seu sol.<br /><em>Seu jeito.</em></h1>
-          <p class="mt-6 max-w-md text-base leading-relaxed text-white/90 sm:text-lg">Biquínis para colecionar momentos leves, bonitos e inteiramente seus.</p>
-          <a class="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-coral px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#b94f3f]" href="https://wa.me/5598985700659?text=Olá%2C%20quero%20conhecer%20a%20coleção%20da%20TODA%20LINDA%20STORE!" target="_blank" rel="noopener">
-            Fale conosco <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24" aria-labelledby="intro-title">
-        <div class="grid gap-8 md:grid-cols-[1fr_1.5fr] md:items-end">
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-coral">Feito para o seu verão</p>
-          <h2 id="intro-title" class="max-w-3xl font-display text-3xl leading-tight sm:text-5xl">Peças que acompanham a maré, a viagem de última hora e os dias que pedem um pouco mais de cor.</h2>
-        </div>
-      </section>
-
-      <section id="colecao" class="bg-[#e9e4dc] px-5 py-16 sm:px-8 sm:py-24" aria-labelledby="colecao-title">
-        <div class="mx-auto max-w-7xl">
-          <div class="mb-10 flex flex-wrap items-end justify-between gap-4 sm:mb-14">
-            <div>
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-coral">Lookbook</p>
-              <h2 id="colecao-title" class="mt-2 font-display text-4xl sm:text-5xl">A coleção</h2>
-            </div>
-            <p class="max-w-sm text-sm leading-relaxed text-slate-600">Escolha o seu favorito e fale com a gente para consultar tamanhos e disponibilidade.</p>
+      <section id="inicio" class="hero-section">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="hero-eyebrow">TODA LINDA STORE <span aria-hidden="true">✦</span> MODA FEMININA</p>
+            <h1 class="font-display">Seu estilo.<br /><em>Seu momento.</em></h1>
+            <p class="hero-description">Roupas escolhidas para acompanhar você em todos os momentos — com conforto, beleza e personalidade.</p>
           </div>
+          <div class="hero-brand">
+            <span class="hero-brand-orbit" aria-hidden="true"></span>
+            <picture>
+              <source srcset="assets/logo.webp" type="image/webp" />
+              <img class="hero-logo" src="assets/logo.jpg" alt="Logo dourada da TODA LINDA STORE com uma concha" width="896" height="1195" fetchpriority="high" />
+            </picture>
+            <p>ESTILO <span aria-hidden="true">·</span> CONFORTO <span aria-hidden="true">·</span> PERSONALIDADE</p>
+          </div>
+        </div>
+      </section>
 
-          <div class="product-carousel" aria-roledescription="carrossel" aria-label="Modelos de biquíni">
-            <div id="product-track" class="carousel-track" tabindex="0" aria-label="Deslize para ver os próximos biquínis">
+      <section id="colecao" class="bg-[#f0e9df] px-5 py-16 sm:px-8 sm:py-24">
+        <div class="mx-auto max-w-7xl">
+          <section class="category-panel category-panel-beach" aria-labelledby="moda-praia-title">
+          <div class="product-category-heading reveal-on-scroll">
+            <span class="product-category-kicker">Para os dias de sol</span>
+            <h3 id="moda-praia-title">Moda praia</h3>
+          </div>
+          <div class="product-carousel" aria-roledescription="carrossel" aria-label="Moda praia">
+            <div id="product-track" class="carousel-track" tabindex="0" aria-label="Deslize para ver as próximas peças de moda praia">
             <article class="group product-card">
               <button class="product-image image-trigger" type="button" aria-label="Ampliar foto do biquíni Brisa"><picture><source srcset="assets/1.webp" type="image/webp" /><img src="assets/1.jpg" alt="Biquíni bordô e branco Modelo Brisa" width="1062" height="1280" loading="lazy" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 90vw" /></picture><span class="image-zoom" aria-hidden="true">↗</span></button>
               <div class="product-summary"><div><h3 class="font-display text-2xl">Brisa</h3><p class="mt-1 text-sm text-slate-600">Bordô &amp; branco</p></div><p class="product-price">R$ 40,00</p></div><button class="card-want" type="button" data-product="Biquíni Brisa" aria-expanded="false">QUERO <span aria-hidden="true">♥</span></button>
@@ -126,34 +122,93 @@
               <div class="card-actions" hidden><a class="card-whatsapp" href="https://wa.me/5598985700659" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></div>
             </article>
             </div>
-            <div class="carousel-controls" aria-label="Controles da coleção">
+            <div class="carousel-controls" aria-label="Controles da moda praia">
               <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Produto anterior">←</button>
-              <p class="carousel-count"><span id="carousel-current">1</span> <span aria-hidden="true">/</span> <span id="carousel-total">7</span></p>
+              <p class="carousel-count"><span data-carousel-current>1</span> <span aria-hidden="true">/</span> <span data-carousel-total>7</span></p>
               <button class="carousel-arrow" type="button" data-carousel-next aria-label="Próximo produto">→</button>
             </div>
           </div>
+
+          </section>
+
+          <section class="category-panel category-panel-home" aria-labelledby="pijamas-title">
+            <div class="reveal-on-scroll mb-10 flex flex-wrap items-end justify-between gap-4 sm:mb-14">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-coral">Leveza para desacelerar</p>
+                <h3 id="pijamas-title" class="mt-2 font-display text-4xl sm:text-5xl">Pijamas &amp; camisolas</h3>
+              </div>
+              <p class="max-w-sm text-sm leading-relaxed text-slate-600">Todos os pijamas e camisolas estão disponíveis em tamanho único.</p>
+            </div>
+
+            <div class="product-carousel" aria-roledescription="carrossel" aria-label="Pijamas e camisolas">
+              <div class="carousel-track" tabindex="0" aria-label="Deslize para ver os próximos pijamas e camisolas">
+                <article class="group product-card">
+                  <button class="product-image image-trigger" type="button" aria-label="Ampliar foto do pijama Vaquinha"><img src="assets/PIJAMAS/VAQUINHA.jpeg" alt="Pijama Vaquinha com estampa de vaquinha em tons de rosa" loading="lazy" decoding="async" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 90vw" /><span class="image-zoom" aria-hidden="true">↗</span></button>
+                  <div class="product-summary"><div><h4 class="font-display text-2xl">Vaquinha</h4><p class="product-size">Tamanho único</p></div><p class="product-price">R$ 35,00</p></div><button class="card-want" type="button" data-product="Pijama Vaquinha" data-size="tamanho único" aria-expanded="false">QUERO <span aria-hidden="true">♥</span></button>
+                  <div class="card-actions" hidden><a class="card-whatsapp" href="https://wa.me/5598985700659" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="group product-card">
+                  <button class="product-image image-trigger" type="button" aria-label="Ampliar foto do pijama de borboletas"><img src="assets/PIJAMAS/PIJAMA2.jpeg" alt="Pijama azul estampado com borboletas" loading="lazy" decoding="async" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 90vw" /><span class="image-zoom" aria-hidden="true">↗</span></button>
+                  <div class="product-summary"><div><h4 class="font-display text-2xl">Pijama de Borboletas</h4><p class="product-size">Tamanho único</p></div><p class="product-price">R$ 35,00</p></div><button class="card-want" type="button" data-product="Pijama de Borboletas" data-size="tamanho único" aria-expanded="false">QUERO <span aria-hidden="true">♥</span></button>
+                  <div class="card-actions" hidden><a class="card-whatsapp" href="https://wa.me/5598985700659" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="group product-card">
+                  <button class="product-image image-trigger" type="button" aria-label="Ampliar foto do pijama Hello Kitty"><img src="assets/PIJAMAS/WhatsApp%20Image%202026-11-08%20at%2020.10.45.jpeg" alt="Pijama Hello Kitty em estampa xadrez verde" loading="lazy" decoding="async" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 90vw" /><span class="image-zoom" aria-hidden="true">↗</span></button>
+                  <div class="product-summary"><div><h4 class="font-display text-2xl">Pijama Hello Kitty</h4><p class="product-size">Tamanho único</p></div><p class="product-price">R$ 35,00</p></div><button class="card-want" type="button" data-product="Pijama Hello Kitty" data-size="tamanho único" aria-expanded="false">QUERO <span aria-hidden="true">♥</span></button>
+                  <div class="card-actions" hidden><a class="card-whatsapp" href="https://wa.me/5598985700659" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="group product-card">
+                  <button class="product-image image-trigger" type="button" aria-label="Ampliar foto do pijama Lindinha"><img src="assets/PIJAMAS/LINDINHA.jpeg" alt="Pijama rosa estampado com personagem de laço" loading="lazy" decoding="async" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 90vw" /><span class="image-zoom" aria-hidden="true">↗</span></button>
+                  <div class="product-summary"><div><h4 class="font-display text-2xl">Pijama Lindinha</h4><p class="product-size">Tamanho único</p></div><p class="product-price">R$ 35,00</p></div><button class="card-want" type="button" data-product="Pijama Lindinha" data-size="tamanho único" aria-expanded="false">QUERO <span aria-hidden="true">♥</span></button>
+                  <div class="card-actions" hidden><a class="card-whatsapp" href="https://wa.me/5598985700659" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="group product-card">
+                  <button class="product-image image-trigger" type="button" aria-label="Ampliar foto do pijama Florzinha"><img src="assets/PIJAMAS/FLORZINHA.jpeg" alt="Pijama azul claro estampado com personagem de laço" loading="lazy" decoding="async" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 90vw" /><span class="image-zoom" aria-hidden="true">↗</span></button>
+                  <div class="product-summary"><div><h4 class="font-display text-2xl">Pijama Florzinha</h4><p class="product-size">Tamanho único</p></div><p class="product-price">R$ 35,00</p></div><button class="card-want" type="button" data-product="Pijama Florzinha" data-size="tamanho único" aria-expanded="false">QUERO <span aria-hidden="true">♥</span></button>
+                  <div class="card-actions" hidden><a class="card-whatsapp" href="https://wa.me/5598985700659" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="group product-card">
+                  <button class="product-image image-trigger" type="button" aria-label="Ampliar foto do pijama Docinho"><img src="assets/PIJAMAS/DOCINHO.jpeg" alt="Pijama verde estampado com personagem de olhos verdes" loading="lazy" decoding="async" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 90vw" /><span class="image-zoom" aria-hidden="true">↗</span></button>
+                  <div class="product-summary"><div><h4 class="font-display text-2xl">Pijama Docinho</h4><p class="product-size">Tamanho único</p></div><p class="product-price">R$ 35,00</p></div><button class="card-want" type="button" data-product="Pijama Docinho" data-size="tamanho único" aria-expanded="false">QUERO <span aria-hidden="true">♥</span></button>
+                  <div class="card-actions" hidden><a class="card-whatsapp" href="https://wa.me/5598985700659" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></div>
+                </article>
+                <article class="group product-card">
+                  <button class="product-image image-trigger" type="button" aria-label="Ampliar foto da camisola Borboleta"><img src="assets/PIJAMAS/CAMISOLA.jpeg" alt="Camisola azul clara estampada com borboletas" loading="lazy" decoding="async" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 90vw" /><span class="image-zoom" aria-hidden="true">↗</span></button>
+                  <div class="product-summary"><div><h4 class="font-display text-2xl">Camisola Borboleta</h4><p class="product-size">Tamanho único</p></div><p class="product-price">R$ 40,00</p></div><button class="card-want" type="button" data-product="Camisola Borboleta" data-size="tamanho único" aria-expanded="false">QUERO <span aria-hidden="true">♥</span></button>
+                  <div class="card-actions" hidden><a class="card-whatsapp" href="https://wa.me/5598985700659" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></div>
+                </article>
+              </div>
+              <div class="carousel-controls" aria-label="Controles dos pijamas e camisolas">
+                <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Produto anterior">←</button>
+                <p class="carousel-count"><span data-carousel-current>1</span> <span aria-hidden="true">/</span> <span data-carousel-total>7</span></p>
+                <button class="carousel-arrow" type="button" data-carousel-next aria-label="Próximo produto">→</button>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 
-      <section id="sobre" class="overflow-hidden bg-[#e8f1ef] px-5 py-16 sm:px-8 sm:py-24" aria-labelledby="sobre-title">
-        <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
-          <div class="relative mx-auto w-full max-w-md"><picture><source srcset="assets/logo.webp" type="image/webp" /><img class="aspect-[4/5] w-full object-cover" src="assets/logo.jpg" alt="Logotipo dourado da TODA LINDA STORE com uma concha" width="896" height="1195" loading="lazy" sizes="(min-width: 768px) 43vw, 88vw" /></picture><div class="absolute -bottom-5 -right-3 bg-coral px-5 py-4 text-sm font-semibold text-white sm:-right-8">Sol, sal e leveza.</div></div>
-          <div class="max-w-xl md:pl-8"><p class="text-xs font-bold uppercase tracking-[0.2em] text-coral">Sobre nós</p><h2 id="sobre-title" class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Toda linda começa quando você se reconhece no espelho.</h2><p class="mt-6 leading-relaxed text-slate-700">Somos apaixonadas por peças que vestem bem e fazem dos dias de praia uma memória ainda mais bonita. Cada modelo é escolhido para celebrar o seu corpo, a sua liberdade e a sua versão mais solar.</p><a class="mt-7 inline-flex min-h-12 items-center rounded-full border border-ink px-6 py-3 text-sm font-bold transition hover:bg-ink hover:text-white" href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Acompanhe no Instagram</a></div>
+      <section id="sobre" class="brand-story" aria-labelledby="sobre-title">
+        <div class="brand-story-inner">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-coral">Sobre a TODA LINDA</p>
+          <h2 id="sobre-title" class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Toda linda começa quando você se reconhece no espelho.</h2>
+          <p class="mt-6 leading-relaxed text-slate-700">Acreditamos que se sentir bem com o que você veste transforma o dia. Por isso, reunimos peças para diferentes estilos, momentos e jeitos de ser — sempre com carinho em cada escolha.</p>
+          <a class="mt-7 inline-flex min-h-12 items-center rounded-full border border-ink px-6 py-3 text-sm font-bold transition hover:bg-ink hover:text-white" href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Acompanhe no Instagram</a>
         </div>
       </section>
 
       <section id="contato" class="bg-ink px-5 py-16 text-white sm:px-8 sm:py-24" aria-labelledby="contato-title">
-        <div class="mx-auto max-w-3xl text-center"><p class="text-xs font-bold uppercase tracking-[0.2em] text-[#d9b96f]">Seu próximo biquíni está aqui</p><h2 id="contato-title" class="mt-3 font-display text-4xl leading-tight sm:text-6xl">Vamos encontrar o modelo perfeito para você?</h2><p class="mx-auto mt-5 max-w-xl text-white/75">Chame a TODA LINDA STORE pelo canal que for mais confortável. A gente responde com carinho.</p><div class="mt-9 grid gap-3 sm:grid-cols-3"><a class="contact-button bg-coral hover:bg-[#b94f3f]" href="https://wa.me/5598985700659?text=Olá%2C%20vim%20pelo%20site%20da%20TODA%20LINDA%20STORE!" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a class="contact-button border border-white/25 hover:bg-white hover:text-ink" href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a><a class="contact-button border border-white/25 hover:bg-white hover:text-ink" href="mailto:[EMAIL]" target="_blank" rel="noopener">E-mail <span aria-hidden="true">↗</span></a></div><p class="mt-5 text-xs text-white/45">E-mail: <span>[EMAIL]</span></p></div>
+        <div class="mx-auto max-w-3xl text-center"><p class="text-xs font-bold uppercase tracking-[0.2em] text-[#d9b96f]">Sua próxima peça está aqui</p><h2 id="contato-title" class="mt-3 font-display text-4xl leading-tight sm:text-6xl">Vamos encontrar a peça perfeita para você?</h2><p class="mx-auto mt-5 max-w-xl text-white/75">Chame a TODA LINDA STORE pelo canal que for mais confortável. A gente responde com carinho.</p><div class="mt-9 grid gap-3 sm:grid-cols-3"><a class="contact-button bg-coral hover:bg-[#b94f3f]" href="https://wa.me/5598985700659?text=Olá%2C%20vim%20pelo%20site%20da%20TODA%20LINDA%20STORE!" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a><a class="contact-button border border-white/25 hover:bg-white hover:text-ink" href="https://www.instagram.com/todalinda_storeee/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a><a class="contact-button border border-white/25 hover:bg-white hover:text-ink" href="mailto:[EMAIL]" target="_blank" rel="noopener">E-mail <span aria-hidden="true">↗</span></a></div><p class="mt-5 text-xs text-white/45">E-mail: <span>[EMAIL]</span></p></div>
       </section>
     </main>
 
-    <footer class="bg-[#182126] px-5 py-7 text-center text-xs text-white/55 sm:px-8"><p>© <span id="year"></span> TODA LINDA STORE. Feito para dias de sol.</p></footer>
+    <footer class="bg-[#241f1d] px-5 py-7 text-center text-xs text-white/55 sm:px-8"><p>© <span id="year"></span> TODA LINDA STORE. Feito para você.</p></footer>
 
     <dialog id="image-dialog" class="image-dialog" aria-labelledby="dialog-product">
       <div class="dialog-content">
         <button class="dialog-close" type="button" aria-label="Fechar imagem ampliada">×</button>
         <img id="dialog-image" src="" alt="" />
-        <div class="dialog-caption"><p class="text-xs font-bold uppercase tracking-[0.18em] text-coral">TODA LINDA STORE</p><p id="dialog-product" class="mt-1 font-display text-2xl text-ink"></p><p class="mt-1 text-sm text-slate-600">R$ 40,00</p></div>
+        <div class="dialog-caption"><p class="text-xs font-bold uppercase tracking-[0.18em] text-coral">TODA LINDA STORE</p><p id="dialog-product" class="mt-1 font-display text-2xl text-ink"></p><p id="dialog-price" class="mt-1 text-sm text-slate-600"></p></div>
       </div>
     </dialog>
     <script src="script.js"></script>

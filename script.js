@@ -10,7 +10,10 @@ document.querySelectorAll('.card-want[data-product]').forEach((button) => {
     document.querySelectorAll('.card-want').forEach((item) => { item.setAttribute('aria-expanded', 'false'); });
 
     if (willOpen) {
-      const message = `Olá! Vim pelo site da TODA LINDA STORE e quero o ${button.dataset.product}. Pode me contar sobre tamanhos e disponibilidade?`;
+      const detailsMessage = button.dataset.size
+        ? ` O tamanho é ${button.dataset.size}. Pode me contar sobre a disponibilidade?`
+        : ' Pode me contar sobre tamanhos e disponibilidade?';
+      const message = `Olá! Vim pelo site da TODA LINDA STORE e quero o ${button.dataset.product}.${detailsMessage}`;
       whatsappLink.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
       actions.hidden = false;
       button.setAttribute('aria-expanded', 'true');
@@ -23,6 +26,7 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 const imageDialog = document.querySelector('#image-dialog');
 const dialogImage = document.querySelector('#dialog-image');
 const dialogProduct = document.querySelector('#dialog-product');
+const dialogPrice = document.querySelector('#dialog-price');
 const dialogClose = document.querySelector('.dialog-close');
 
 function closeImageDialog() {
@@ -32,10 +36,12 @@ function closeImageDialog() {
 document.querySelectorAll('.image-trigger').forEach((trigger) => {
   trigger.addEventListener('click', () => {
     const image = trigger.querySelector('img');
-    const product = trigger.closest('article').querySelector('h3').textContent;
+    const productCard = trigger.closest('article');
+    const product = productCard.querySelector('h3, h4').textContent;
     dialogImage.src = image.currentSrc || image.src;
     dialogImage.alt = image.alt;
     dialogProduct.textContent = product;
+    dialogPrice.textContent = productCard.querySelector('.product-price').textContent;
     imageDialog.showModal();
     dialogClose.focus();
   });
@@ -46,14 +52,17 @@ imageDialog.addEventListener('click', (event) => {
   if (event.target === imageDialog) closeImageDialog();
 });
 
-const productTrack = document.querySelector('#product-track');
-const carouselPrevious = document.querySelector('[data-carousel-prev]');
-const carouselNext = document.querySelector('[data-carousel-next]');
-const carouselCurrent = document.querySelector('#carousel-current');
-const carouselTotal = document.querySelector('#carousel-total');
+document.querySelectorAll('.product-carousel').forEach((carousel) => {
+  const productTrack = carousel.querySelector('.carousel-track');
+  const carouselPrevious = carousel.querySelector('[data-carousel-prev]');
+  const carouselNext = carousel.querySelector('[data-carousel-next]');
+  const carouselCurrent = carousel.querySelector('[data-carousel-current]');
+  const carouselTotal = carousel.querySelector('[data-carousel-total]');
 
-if (productTrack && carouselPrevious && carouselNext && carouselCurrent && carouselTotal) {
+  if (!productTrack || !carouselPrevious || !carouselNext || !carouselCurrent || !carouselTotal) return;
+
   const productCards = [...productTrack.querySelectorAll('.product-card')];
+  if (productCards.length === 0) return;
   carouselTotal.textContent = productCards.length;
 
   function activeCardIndex() {
@@ -102,4 +111,41 @@ if (productTrack && carouselPrevious && carouselNext && carouselCurrent && carou
   }, { passive: true });
   window.addEventListener('resize', updateActiveCard);
   updateActiveCard();
+});
+
+const revealElements = document.querySelectorAll('.reveal-on-scroll');
+if ('IntersectionObserver' in window && revealElements.length > 0) {
+  document.documentElement.classList.add('reveal-ready');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach((element) => revealObserver.observe(element));
+}
+
+const categoryPanels = document.querySelectorAll('.category-panel');
+if (
+  'IntersectionObserver' in window
+  && categoryPanels.length > 0
+  && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+) {
+  document.documentElement.classList.add('stair-ready');
+  const stairObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.product-card').forEach((card, index) => {
+          card.style.setProperty('--stair-delay', `${index * 70}ms`);
+          card.classList.add('is-visible');
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  categoryPanels.forEach((panel) => stairObserver.observe(panel));
 }
